@@ -1,0 +1,1 @@
+# Legal Resources app init.

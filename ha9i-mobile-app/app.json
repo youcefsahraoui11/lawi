@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "name": "HA9I",
+    "slug": "ha9i-mobile-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.anonymous.ha9imobileapp"
+    }
+  }
+}

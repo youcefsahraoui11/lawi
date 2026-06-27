@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HA9I - Mobile App Simulator</title>
+  <!-- Google Fonts: Cairo for Arabic, Inter for Latin -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Ionicons for native look -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="simulator-layout">
+    
+    <!-- Left panel: Architectural details & controls -->
+    <div class="control-panel">
+      <div class="logo-area">
+        <div class="gov-seal-mini"></div>
+        <div>
+          <h1>HA9I (حقي)</h1>
+          <p class="subtitle">Algerian Legal Assistance Platform</p>
+        </div>
+      </div>
+      
+      <div class="description-card">
+        <h3>Architecture Overview</h3>
+        <p>This simulator demonstrates the exact UI flow, translations, and component layouts implemented in the **React Native + Expo** project directory.</p>
+        
+        <div class="tech-tags">
+          <span class="tag">React Native</span>
+          <span class="tag">Expo</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Zustand</span>
+          <span class="tag">i18next</span>
+          <span class="tag">Axios Client</span>
+        </div>
+      </div>
+
+      <div class="feature-checklist">
+        <h3>Interactive Flow Tests</h3>
+        <ul>
+          <li class="checked"><ion-icon name="checkmark-circle"></ion-icon> <span><b>RTL/LTR Layouts</b>: Toggle Arabic (RTL), French (LTR) or English (LTR) dynamically.</span></li>
+          <li class="checked"><ion-icon name="checkmark-circle"></ion-icon> <span><b>Legal Assistant</b>: Ask questions to mock RAG POST API.</span></li>
+          <li class="checked"><ion-icon name="checkmark-circle"></ion-icon> <span><b>Complaint Flow</b>: Fill long-form, submit, and track status.</span></li>
+          <li class="checked"><ion-icon name="checkmark-circle"></ion-icon> <span><b>Lawyers Map</b>: Search and view OpenStreetMap coordinates.</span></li>
+          <li class="checked"><ion-icon name="checkmark-circle"></ion-icon> <span><b>Procedure Scanner</b>: Test birth certificate mock scanning.</span></li>
+        </ul>
+      </div>
+
+      <div class="workspace-note">
+        <p>💡 <b>Tip:</b> All React Native source files are fully created in the project folder. Run <code>npm run start</code> or <code>npx tsc --noEmit</code> to check it.</p>
+      </div>
+    </div>
+
+    <!-- Right panel: Interactive Phone Frame -->
+    <div class="phone-container">
+      <div class="phone-frame">
+        <div class="phone-speaker"></div>
+        <div class="phone-screen" id="app-screen">
+          
+          <!-- Status Bar -->
+          <div class="status-bar">
+            <span class="status-time" id="status-time">09:41</span>
+            <div class="status-icons">
+              <ion-icon name="wifi"></ion-icon>
+              <ion-icon name="cellular"></ion-icon>
+              <ion-icon name="battery-full"></ion-icon>
+            </div>
+          </div>
+
+          <!-- Active Screen Viewport -->
+          <div class="app-viewport" id="viewport">
+            <!-- Screens will be dynamically rendered here via app.js -->
+          </div>
+
+          <!-- Bottom Navigation Bar (Hidden on Splash/LangSelect/Auth) -->
+          <div class="bottom-nav" id="bottom-nav">
+            <button class="nav-item active" data-tab="home">
+              <ion-icon name="home-outline"></ion-icon>
+              <span class="nav-label" data-i18n="home.service_assistant">المساعد</span>
+            </button>
+            <button class="nav-item" data-tab="lawyers">
+              <ion-icon name="people-outline"></ion-icon>
+              <span class="nav-label" data-i18n="lawyers.title">دليل المحامين</span>
+            </button>
+            <button class="nav-item" data-tab="complaints">
+              <ion-icon name="document-text-outline"></ion-icon>
+              <span class="nav-label" data-i18n="complaints.tracking_title">متابعة</span>
+            </button>
+            <button class="nav-item" data-tab="resources">
+              <ion-icon name="library-outline"></ion-icon>
+              <span class="nav-label" data-i18n="resources.title">الموارد</span>
+            </button>
+            <button class="nav-item" data-tab="profile">
+              <ion-icon name="person-outline"></ion-icon>
+              <span class="nav-label" data-i18n="profile.title">الحساب</span>
+            </button>
+          </div>
+
+        </div>
+        <div class="phone-home-indicator"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+google-genai
+fastapi
+uvicorn
+python-dotenv
+langchain-core
+langchain-community
+faiss-cpu
+rank-bm25
+requests
