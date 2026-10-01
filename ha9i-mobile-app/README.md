@@ -6,9 +6,6 @@ We have successfully designed and built the complete frontend architecture and a
 
 ## 📂 Project Architecture
 
-The codebase has been generated in the project workspace at:
-`/home/youcef/snap/antigravity/5/.gemini/antigravity/scratch/ha9i-mobile-app/`
-
 Here is a summary of the architectural modules created:
 
 ### 1. Configuration & Styles
@@ -54,9 +51,6 @@ To run the mobile app in your web browser (highly recommended for local evaluati
 ---
 
 ## ⚙️ Django REST Framework Backend Architecture
-
-A secure backend system has been created at:
-`/home/youcef/snap/antigravity/5/.gemini/antigravity/scratch/ha9i-backend/`
 
 Here is a summary of the components implemented:
 
@@ -194,7 +188,3 @@ Depending on where you are running the mobile client, configure the API base URL
   }
   ```
 
-### 4. Active Frontend-Backend Integration
-We have uncommented and activated the real API calls in the mobile frontend application directory at [ha9i-mobile-app](file:///home/youcef/snap/antigravity/5/.gemini/antigravity/scratch/ha9i-mobile-app):
-- **Chat API** (`chat.ts`): Invokes `apiClient.post('/chat/', { message })` dynamically. If the backend is offline, it falls back to the client-side mock to keep the UI running.
-- **Complaints API** (`complaints.ts`): Invokes `apiClient.post('/complaints/', payload)` with automatic mapping of frontend camelCase objects to backend snake_case variables and back, keeping a robust fallback in case of connection failure.
